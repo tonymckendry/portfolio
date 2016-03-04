@@ -1,0 +1,59 @@
+div, body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  height: 100vh;
+  width: 80vw;
+  background-color: #f40000;
+  position: relative;
+  margin: 0 auto;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.left{
+  width: 48%;
+  height: 100vh;
+  border-right: 2px solid black;
+  position: absolute;
+  left: 0;
+}
+
+.right{
+  width: 48%;
+  height: 100vh;
+  border-left: 2px solid black;
+  position: absolute;
+  right: 0;
+}
+
+.leftScreen{
+  width: 90%;
+  height: 75%;
+  background-color: #fafafa;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.rightScreen{
+  width: 95%;
+  height: 80%;
+  background-color: #50ff00;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+}
