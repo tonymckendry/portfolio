@@ -5,9 +5,11 @@
     <div class='yellowLight'></div>
     <div class='greenLight'></div>
     <div class='leftScreen'>
-      <ul>
-        <li ng-repeat='pika in pokemon | orderBy: "id"'>{{pika.name}}</li>
-      </ul>
+      <div class='pokeList' ng-repeat='pika in pokemon | orderBy: "id"' ng-mouseenter="hoverSelect(pika)" ng-mouseleave="hoverSelect(pika)">
+        <img class='selectArrow' src="/images/selectArrow.png" ng-show='pika.showArrow'>
+        <span class='pokeName'>{{pika.name}}</span>
+        <span class='showId'>{{pika.showId}}</span>
+      </div>
     </div>
 
   </div>

@@ -37,19 +37,22 @@ app.controller("CatsShowController", function($scope, CatService, $routeParams){
         var pokeArr = []
         var pokePath = response.data.objects[0].pokemon
 
-        // The PokeAPI does not return the Pokemon in the correct order, but it 
+        // The PokeAPI does not return the Pokemon in the correct order, but it
         // does give me their ID in the resource_uri that is provided, so I just
         // have to isolate that and then Angular can sort it for me
 
         for (var i = 0; i < pokePath.length; i++) {
           var pokeObj = {}
           pokeObj.name = pokePath[i].name
+          //capitolizing the first letter
+          pokeObj.name = pokeObj.name.charAt(0).toUpperCase() + pokeObj.name.slice(1, pokeObj.name.length)
           pokeObj.id = pokePath[i].resource_uri[15]+pokePath[i].resource_uri[16]+pokePath[i].resource_uri[17]+pokePath[i].resource_uri[18]+pokePath[i].resource_uri[19]
+          // removing NaN characters
           if (pokeObj.id[2] == 'u'){
-            pokeObj.id = pokeObj.id[0]
+            pokeObj.id = '00'+pokeObj.id[0]
           }
           else if (pokeObj.id[2] == '/'){
-            pokeObj.id = pokeObj.id[0] + pokeObj.id[1]
+            pokeObj.id = '0' + pokeObj.id[0] + pokeObj.id[1]
           }
           else if (pokeObj.id[3] == '/'){
             pokeObj.id = pokeObj.id[0] + pokeObj.id[1] + pokeObj.id[2]
@@ -63,10 +66,16 @@ app.controller("CatsShowController", function($scope, CatService, $routeParams){
           else if (pokeObj.id[4] == 'u'){
             pokeObj.id = pokeObj.id[0] + pokeObj.id[1] + pokeObj.id[2] + pokeObj.id[3]
           }
-          pokeObj.id = parseInt(pokeObj.id)
+          pokeObj.showId = pokeObj.id //The numbers are in a 3 digit string currently, because thats how they look in the Pokedex in the game
+          pokeObj.id = parseInt(pokeObj.id) //I need them to be ints as well (which remove the leading zeroes) for Angular to sort them
+          pokeObj.showArrow = false
           pokeArr.push(pokeObj)
         }
         console.log(pokeArr)
         $scope.pokemon = pokeArr
       })
+        $scope.hoverSelect = function(pika){
+          return pika.showArrow = !pika.showArrow
+          console.log('working')
+        }
     })

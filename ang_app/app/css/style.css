@@ -114,3 +114,20 @@ div, body{
   top: 10px;
   left: 180px;
 }
+
+.showId{
+  float: right;
+}
+
+.pokeName{
+  vertical-align: middle;
+}
+
+.selectArrow{
+  vertical-align: middle;
+  height: 15px;
+}
+
+.pokeList{
+  padding: 5px;
+}
