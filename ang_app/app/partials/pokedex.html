@@ -1,9 +1,22 @@
 <div class='container'>
   <div class='left'>
-    <div class='leftScreen'></div>
+    <div class='blueLight'></div>
+    <div class='redLight'></div>
+    <div class='yellowLight'></div>
+    <div class='greenLight'></div>
+    <div class='leftScreen'>
+      <ul>
+        <li ng-repeat='pika in pokemon | orderBy: "id"'>{{pika.name}}</li>
+      </ul>
+    </div>
 
   </div>
   <div class='right'>
-    <div class='rightScreen'></div>
+    <div class='rightScreen'>
+      <img class='pokeLogo' src="/images/gameboyLogo.png" alt="">
+      <h1>Pokédex</h1>
+      <h4>by</h4>
+      <h2>Tony McKendry</h2>
+    </div>
   </div>
 </div>

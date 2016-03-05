@@ -21,7 +21,7 @@ app.config(function($routeProvider, $locationProvider) {
       })
       .when('/pokedex', {
         templateUrl: 'partials/pokedex.html',
-        controller: 'CatsShowController'
+        controller: 'pokemonController'
       })
     $locationProvider.html5Mode(true);
 });
