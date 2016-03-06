@@ -53,6 +53,11 @@ div, body{
   overflow: scroll;
 }
 
+.leftScreen a{
+  text-decoration: none;
+  color: black; 
+}
+
 .rightScreen{
   width: 95%;
   height: 80%;
