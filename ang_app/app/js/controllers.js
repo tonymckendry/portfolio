@@ -79,3 +79,28 @@ app.controller("CatsShowController", function($scope, CatService, $routeParams){
           console.log('working')
         }
     })
+
+    app.controller("showPokemonController", function($scope, $http, $routeParams){
+      //API will not accept Pokemon names with an uppercase letter so I have to change them back
+      var name = $routeParams.name[0].toLowerCase() + $routeParams.name.slice(1, $routeParams.name.length)
+      $http.get('http://pokeapi.co/api/v1/pokemon/' + name).then(function(result){
+        $http.get('http://pokeapi.co' + result.data.descriptions[0].resource_uri).then(function(description1){
+          $http.get('http://pokeapi.co' + result.data.descriptions[2].resource_uri).then(function(description2){
+            $scope.description1 = description1.data.description
+            $scope.description2 = description2.data.description
+            console.log(result.data)
+            $scope.pokemon = result.data
+            if (result.data.national_id.toString().length == 1){
+              $scope.editId = "00" + result.data.national_id
+            }
+            else if(result.data.national_id.toString().length == 2){
+              $scope.editId = "0" + result.data.national_id
+            }
+          })
+        })
+      })
+      $scope.hoverSelect = function(pika){
+        return pika.showArrow = !pika.showArrow
+        console.log('working')
+      }
+    })

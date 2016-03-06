@@ -23,5 +23,9 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: 'partials/pokedex.html',
         controller: 'pokemonController'
       })
+      .when('/pokedex/:name', {
+        templateUrl: 'partials/showPokemon.html',
+        controller: 'showPokemonController'
+      })
     $locationProvider.html5Mode(true);
 });

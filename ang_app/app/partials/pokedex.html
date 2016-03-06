@@ -1,24 +1,13 @@
-<div class='container'>
-  <div class='left'>
-    <div class='blueLight'></div>
-    <div class='redLight'></div>
-    <div class='yellowLight'></div>
-    <div class='greenLight'></div>
-    <div class='leftScreen'>
-      <div class='pokeList' ng-repeat='pika in pokemon | orderBy: "id"' ng-mouseenter="hoverSelect(pika)" ng-mouseleave="hoverSelect(pika)">
-        <img class='selectArrow' src="/images/selectArrow.png" ng-show='pika.showArrow'>
-        <span class='pokeName'>{{pika.name}}</span>
-        <span class='showId'>{{pika.showId}}</span>
-      </div>
-    </div>
-
+<div class='leftScreen'>
+  <div class='pokeList' ng-repeat='pika in pokemon | orderBy: "id"' ng-mouseenter="hoverSelect(pika)" ng-mouseleave="hoverSelect(pika)">
+    <img class='selectArrow' src="/images/selectArrow.png" ng-show='pika.showArrow'>
+    <span class='pokeName'>{{pika.name}}</span>
+    <span class='showId'>{{pika.showId}}</span>
   </div>
-  <div class='right'>
-    <div class='rightScreen'>
-      <img class='pokeLogo' src="/images/gameboyLogo.png" alt="">
-      <h1>Pokédex</h1>
-      <h4>by</h4>
-      <h2>Tony McKendry</h2>
-    </div>
-  </div>
+</div>
+<div class='rightScreen'>
+  <img class='pokeLogo' src="/images/gameboyLogo.png" alt="">
+  <h1>Pokédex</h1>
+  <h4>by</h4>
+  <h2>Tony McKendry</h2>
 </div>
