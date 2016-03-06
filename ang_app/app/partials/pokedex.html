@@ -1,8 +1,10 @@
 <div class='leftScreen'>
   <div class='pokeList' ng-repeat='pika in pokemon | orderBy: "id"' ng-mouseenter="hoverSelect(pika)" ng-mouseleave="hoverSelect(pika)">
+    <a href="/pokedex/{{pika.name}}">
     <img class='selectArrow' src="/images/selectArrow.png" ng-show='pika.showArrow'>
     <span class='pokeName'>{{pika.name}}</span>
     <span class='showId'>{{pika.showId}}</span>
+  </a>
   </div>
 </div>
 <div class='rightScreen'>
