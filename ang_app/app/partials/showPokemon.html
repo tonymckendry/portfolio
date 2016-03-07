@@ -7,19 +7,23 @@
 </div>
 <div class='rightScreen'>
   <h2>Stats:</h2>
-  <p>Weight: {{pokemon.weight}}</p>
-  <p>Attack: {{pokemon.attack}}</p>
-  <p>Defense: {{pokemon.defense}}</p>
-  <p>Special Attack: {{pokemon.sp_atk}}</p>
-  <p>Special Defense: {{pokemon.sp_def}}</p>
-  <p>Speed: {{pokemon.speed}}</p>
+  <div class='leftStats'>
+    <p>Attack: {{pokemon.attack}}</p>
+    <p>Defense: {{pokemon.defense}}</p>
+    <p>Speed: {{pokemon.speed}}</p>
+  </div>
+  <div class='rightStats'>
+    <p>Special Attack: {{pokemon.sp_atk}}</p>
+    <p>Special Defense: {{pokemon.sp_def}}</p>
+    <p>Weight: {{pokemon.weight}}</p>
+  </div>
   <h3>Description:</h3>
   <p class=firstDesc>{{description1}}</p>
   <p class=pokeDesc>{{description2}}</p>
   <h3 class='moves'>Moves:</h3>
   <div class='movesDiv'>
-    <div ng-repeat='move in pokemon.moves' ng-mouseenter="hoverSelect(move)" ng-mouseleave="hoverSelect(move)">
-      <p><img class='selectArrow' src="/images/selectArrow.png" ng-show='move.showArrow'> {{move.name}}</p>
+    <div class='pokeMoves' ng-repeat='move in pokemon.moves' ng-mouseenter="hoverSelect(move)" ng-mouseleave="hoverSelect(move)">
+      <p class='moveP'><img class='selectArrow' src="/images/selectArrow.png" ng-show='move.showArrow'> {{move.name}}</p>
     </div>
   </div>
 </div>
