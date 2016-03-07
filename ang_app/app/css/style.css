@@ -20,7 +20,7 @@ div, body{
   margin: 0 auto;
   border-left: 2px solid black;
   border-right: 2px solid black;
-  box-shadow: -8px -2px 3px rgba(0,0,0,.3)
+  box-shadow: -8px -2px 8px rgba(0,0,0,.3)
 }
 
 .left{
@@ -137,7 +137,7 @@ div, body{
 }
 
 .blueLight:hover{
-  
+
 }
 
 .blueLight a{

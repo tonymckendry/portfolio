@@ -33,7 +33,7 @@ app.controller("CatsShowController", function($scope, CatService, $routeParams){
   })
 
     app.controller('pokemonController', function($scope, $http){
-      $http.get('http://pokeapi.co/api/v1/pokedex/').then(function(response){
+      $http.get('https://pokeapi.co/api/v1/pokedex/').then(function(response){
         var pokeArr = []
         var pokePath = response.data.objects[0].pokemon
 
@@ -83,9 +83,9 @@ app.controller("CatsShowController", function($scope, CatService, $routeParams){
     app.controller("showPokemonController", function($scope, $http, $routeParams){
       //API will not accept Pokemon names with an uppercase letter so I have to change them back
       var name = $routeParams.name[0].toLowerCase() + $routeParams.name.slice(1, $routeParams.name.length)
-      $http.get('http://pokeapi.co/api/v1/pokemon/' + name).then(function(result){
-        $http.get('http://pokeapi.co' + result.data.descriptions[0].resource_uri).then(function(description1){
-          $http.get('http://pokeapi.co' + result.data.descriptions[2].resource_uri).then(function(description2){
+      $http.get('https://pokeapi.co/api/v1/pokemon/' + name).then(function(result){
+        $http.get('https://pokeapi.co' + result.data.descriptions[0].resource_uri).then(function(description1){
+          $http.get('https://pokeapi.co' + result.data.descriptions[2].resource_uri).then(function(description2){
             $scope.description1 = description1.data.description
             $scope.description2 = description2.data.description
             console.log(result.data)
