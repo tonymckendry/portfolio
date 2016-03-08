@@ -61,3 +61,16 @@ hr{
 .help{
   background-color: pink;
 }
+
+.animated{
+  height: 75px;
+  overflow: hidden;
+}
+
+.none{
+  display: none;
+}
+
+.ng-hide:not(.ng-hide-animate) {
+  transition: all 1s ease-in-out;
+}

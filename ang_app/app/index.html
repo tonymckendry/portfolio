@@ -24,7 +24,7 @@
 
 </head>
 
-<body id="page-top">
+<body ng-mouseover=looped() id="page-top">
       <base href="/">
     <div ng-view></div>
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -65,7 +65,10 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <div ng-controller='animator'><h1 ng-click=fader() class='title'>Full Stack Developer</h1></div> <hr> <h1>Graphic Designer</h1><br></div>
+                <div class='animated' class='animate-show' ng-controller='animator'>
+                  <h1 ng-show=developer ng-click= class='title'>Full Stack Developer</h1>
+                  <h1 ng-show=designer>Graphic Designer</h1>
+                </div>
                 <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
                 <a href="https://www.linkedin.com/in/tonymckendry" class="btn btn-primary btn-xl page-scroll hovWhite linkedin">LinkedIn</a>
                 <a href="https://github.com/tonymckendry" class="btn btn-primary btn-xl page-scroll hovWhite github">GitHub</a>
