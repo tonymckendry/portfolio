@@ -1,31 +1,13 @@
-var app = angular.module("myApp", ['ngRoute', 'ngResource']);
+var app = angular.module("myApp", ['ngRoute', 'ngResource', 'ngAnimate']);
 
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'partials/home.html',
-        controller: 'MainController'
+        templateUrl: 'partials/portfolio.html',
+        controller: 'portfolioController'
       })
-      .when('/cats', {
-        templateUrl: 'partials/cats/index.html',
-        controller: 'CatsIndexController'
-      })
-      .when('/cats/new', {
-        templateUrl: 'partials/cats/new.html',
-        controller: 'CatsPostController'
-      })
-      .when('/cats/:id', {
-        templateUrl: 'partials/cats/show.html',
-        controller: 'CatsShowController'
-      })
-      .when('/pokedex', {
-        templateUrl: 'partials/pokedex.html',
-        controller: 'pokemonController'
-      })
-      .when('/pokedex/:name', {
-        templateUrl: 'partials/showPokemon.html',
-        controller: 'showPokemonController'
-      })
+
+
     $locationProvider.html5Mode(true);
 });

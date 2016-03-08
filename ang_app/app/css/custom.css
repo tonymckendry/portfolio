@@ -1,0 +1,63 @@
+.linkedin{
+  background-color: #1b86bc;
+  margin-right: 20px;
+}
+
+.github{
+  background-color: #333333;
+    margin-right: 20px;
+}
+
+hr{
+  background-color: #00ABF0;
+}
+
+.topScroll{
+  background-color: #87318C;
+}
+
+.title{
+  font-size: .8em;
+}
+
+.animate{
+	-webkit-transition: 1s linear all; /* Chrome */
+	transition: 1s linear all;
+	opacity: 0;
+}
+
+.animate-enter.animate-enter-active {
+	opacity: 1;
+}
+
+.hovWhite:hover{
+  background-color: white;
+  color: black;
+}
+
+.hovBlue:hover{
+  background-color: #00ABF0;
+  color: white;
+}
+
+.twitter{
+  background-color: #2fc2ef;
+  color: white;
+}
+
+.linkein{
+  width: 3%;
+  vertical-align: bottom;
+}
+
+.title{
+  transition: all 1s ease-in-out;
+}
+
+.fade{
+  opacity: .1;
+}
+
+.help{
+  background-color: pink;
+}
