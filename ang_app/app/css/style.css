@@ -54,6 +54,7 @@ div, body{
   border: 2px solid black;
   border-radius: 2px;
   overflow: scroll;
+  padding: 3px;
 }
 .leftScreenShow{
   width: 525px;
@@ -262,4 +263,9 @@ div, body{
 .homeIcon{
   width: 70%;
   margin-top: 8px;
+}
+
+.pokeGif{
+  width: 100%;
+
 }

@@ -32,8 +32,11 @@ app.controller("CatsShowController", function($scope, CatService, $routeParams){
     }
   })
 
-  app.controller('pokemonController', function($scope, $http){
+  app.controller('pokemonController', function($scope, $http, PokeService){
+    $scope.showPokemon = false;
+    $scope.showMoves = false;
     $http.get('//pokeapi.co/api/v1/pokedex/').then(function(response){
+
       var pokeArr = []
       var pokePath = response.data.objects[0].pokemon
 
@@ -78,6 +81,28 @@ app.controller("CatsShowController", function($scope, CatService, $routeParams){
         return pika.showArrow = !pika.showArrow
         console.log('working')
       }
+
+      $scope.showLeft = function(pika){
+        return pika.showArrowLeft = true;
+      }
+
+      PokeService.getMoves().then(function(payload){
+        $scope.movesCollection = payload.data;
+        console.log(payload.data)
+      }, function(error){
+        console.log("an error occurred");
+      });
+
+      $scope.clickPokemon = function(){
+        $scope.showPokemon = true;
+        $scope.showMoves = false;
+      }
+
+      $scope.clickMoves = function(){
+        $scope.showPokemon = false;
+        $scope.showMoves = true;
+      }
+
   })
 
   app.controller("showPokemonController", function($scope, $http, $routeParams){

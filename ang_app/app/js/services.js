@@ -18,3 +18,14 @@ app.service("CatService", function($http){
 
   return CatService;
 });
+
+app.service("PokeService", function($http){
+  var PokeService = {};
+
+  PokeService.getMoves = function(){
+    return $http.get("http://localhost:3000/moves", {method: "jsponp"})
+  }
+
+
+  return PokeService;
+});
