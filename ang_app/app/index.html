@@ -47,7 +47,7 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#skills">Skills</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
@@ -64,17 +64,19 @@
 
     <header>
         <div class="header-content">
-            <div class="header-content-inner">
+            <div data-ng-init="looped()" class="header-content-inner">
                 <div class='animated' class='animate-show' ng-controller='animator'>
-                  <h1 ng-show=developer ng-click= class='title'>Full Stack Developer</h1>
-                  <h1 ng-show=designer>Graphic Designer</h1>
+                  <h1 ng-show=developer class='title'>Full Stack Developer</h1>
+                  <h1 ng-show=designer class='title'>Graphic Designer</h1>
                 </div>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+                <hr>
+                <p>Responsive and Innovative Development</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll topScroll hovWhite">Check Out My Skills</a>
+                <hr>
                 <a href="https://www.linkedin.com/in/tonymckendry" class="btn btn-primary btn-xl page-scroll hovWhite linkedin">LinkedIn</a>
                 <a href="https://github.com/tonymckendry" class="btn btn-primary btn-xl page-scroll hovWhite github">GitHub</a>
                 <a href="https://twitter.com/tonymckendry" class="btn btn-primary btn-xl page-scroll hovWhite twitter">Twitter</a>
-                <hr>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll topScroll hovWhite">Find Out More</a>
+
             </div>
         </div>
     </header>
@@ -83,9 +85,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">We've got what you need!</h2>
+                    <h2 class="section-heading">TLDR:</h2>
                     <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+                    <p class="text-faded">I have a Bachelor's degree in Art and Design from CU Boulder. After working as a freelance artist and designer for many years, as well as a stint as an IT Project Manager in the Printing Industry, I took the plunge into Full Stack Development and have never looked back</p>
                     <a href="#" class="btn btn-default btn-xl hovBlue">Get Started!</a>
                 </div>
             </div>
@@ -95,40 +97,72 @@
     <section id="services">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
+                <div class="col-lg-15 text-center">
+                    <h2 class="section-heading">Skills:</h2>
                     <hr class="primary">
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                        <h3>Design</h3>
+                        <p class="text-muted">Photoshop Master</p>
+                        <p class="text-muted">Creative Suite Veteran</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
+                        <i class="fa fa-4x fa-code wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <h3>HTML/CSS</h3>
+                        <p class="text-muted">Responsive Design</p>
+                        <p class="text-muted">Bootstrap</p>
+                        <p class="text-muted">Jade</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
+                        <i class="fa fa-4x fa-terminal wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <h3>Javascript</h3>
+                        <p class="text-muted">Node.js</p>
+                        <p class="text-muted">Express</p>
+                        <p class="text-muted">Angular.js</p>
+                        <p class="text-muted">jQuery</p>
+                        <p class="text-muted">AJAX</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
+                        <i class="fa fa-4x fa-database wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Database</h3>
+                        <p class="text-muted">PostgreSQL</p>
+                        <p class="text-muted">Knex</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-gamepad wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Interests</h3>
+                        <p class="text-muted">Frontend Development</p>
+                        <p class="text-muted">UI/UX</p>
+                        <p class="text-muted">Server-side Templating</p>
+                        <p class="text-muted">Node.js</p>
+                        <p class="text-muted">Hardware</p>
+                        <p class="text-muted">VR/AR</p>
+                        <p class="text-muted">Gaming</p>
+                        <p class="text-muted">Art/Design</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-rebel wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Other</h3>
+                        <p class="text-muted">Swift</p>
+                        <p class="text-muted">TDD</p>
+                        <p class="text-muted">Unix/Terminal</p>
+                        <p class="text-muted">Agile Workflow</p>
                     </div>
                 </div>
             </div>

@@ -8,15 +8,16 @@ app.controller("MainController", function($scope, $http, CatService){
   })
 
   app.controller("animator", function($scope){
-        $scope.developer = false;
-        $scope.designer = true;
+        $scope.developer = true;
+        $scope.designer = false;
         $scope.fade = true
+
     $scope.fader = function(){
       console.log('controller is working')
       $scope.fade = false
     }
 
-
+    var i = 0;
     var looper = function(){
       setTimeout(looped, 2000)
     }
@@ -24,13 +25,12 @@ app.controller("MainController", function($scope, $http, CatService){
       $scope.developer = !$scope.developer;
       $scope.designer = !$scope.designer;
       looper()
-      console.log('looped')
     }
 
     $scope.looped = function(){
+      setTimeout(function(){$scope.designer = !$scope.designer;}, 2000)
       $scope.developer = !$scope.developer;
-      $scope.designer = !$scope.designer;
-      console.log('looped-click')
+
     }
 
     looper()

@@ -5,7 +5,7 @@ app.config(function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'partials/portfolio.html',
-        controller: 'portfolioController'
+        controller: 'animator'
       })
 
 

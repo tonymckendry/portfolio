@@ -52,25 +52,23 @@ hr{
 
 .title{
   transition: all 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.fade{
-  opacity: .1;
-}
-
-.help{
-  background-color: pink;
-}
 
 .animated{
   height: 75px;
-  overflow: hidden;
+  position: relative;
 }
 
 .none{
   display: none;
 }
 
-.ng-hide:not(.ng-hide-animate) {
-  transition: all 1s ease-in-out;
-}
+.ng-hide-add         { animation:2s flipOutX ease; display: none;}
+
+.ng-hide-remove      { animation:2s flipInX ease; display: block;}
