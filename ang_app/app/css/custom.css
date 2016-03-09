@@ -58,6 +58,7 @@ hr{
 .twitter{
   background-color: #2fc2ef;
   color: white;
+  margin-right: 20px;
 }
 
 .linkein{
@@ -92,3 +93,21 @@ hr{
 .ng-hide-add         { animation:2s flipOutX ease; display: none;}
 
 .ng-hide-remove      { animation:2s flipInX ease; display: block;}
+
+.twitterIcon{
+  width: 20px;
+  margin-right: 10px;
+}
+
+.githubIcon{
+  width: 20px;
+  margin-right: 10px;
+}
+.d9Icon{
+  width: 20px;
+  margin-right: 10px;
+}
+
+.d9{
+  background-color: #87318C;
+}
