@@ -40,6 +40,21 @@ hr{
   color: white;
 }
 
+.hovBlack{
+  background-color: black;
+  color: white;
+}
+
+.hovPurpBlue{
+  background-color: white;
+  color: #00ABF0;
+}
+
+.hovPurpBlue:hover{
+  background-color: #00abf0;
+  color: black;
+}
+
 .twitter{
   background-color: #2fc2ef;
   color: white;
@@ -67,6 +82,11 @@ hr{
 
 .none{
   display: none;
+}
+
+#portfolio{
+  text-align: center;
+  padding-top: 15px;
 }
 
 .ng-hide-add         { animation:2s flipOutX ease; display: none;}

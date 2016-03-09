@@ -1,5 +1,5 @@
 {
-  "firebase": "tonymckendrypokedex",
+  "firebase": "tonymckportfolio",
   "rewrites": [
   {
     "source": "**/**/**",
