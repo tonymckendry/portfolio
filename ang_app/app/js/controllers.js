@@ -17,7 +17,6 @@ app.controller("MainController", function($scope, $http, CatService){
       $scope.fade = false
     }
 
-    var i = 0;
     var looper = function(){
       setTimeout(looped, 2000)
     }
@@ -25,6 +24,7 @@ app.controller("MainController", function($scope, $http, CatService){
       $scope.developer = !$scope.developer;
       $scope.designer = !$scope.designer;
       looper()
+      console.log('developer is ' +$scope.developer + ' designer is ' +$scope.designer)
     }
 
     $scope.looped = function(){
